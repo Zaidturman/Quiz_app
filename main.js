@@ -7,9 +7,13 @@ let questionArea = document.querySelector(".question-area");
 let answerArea = document.querySelector(".answer-area");
 let submitButton = document.querySelector(".submit");
 let results = document.querySelector(".results");
+let countdoun = document.querySelector(".countdoun");
+let info = document.querySelector(".info");
+let bullets = document.querySelector(".bullets");
 
 let currentIndex = 0;
 let RightAnswers = 0;
+let countDownInverval;
 
 function getQuestions() {
   let myReqest = new XMLHttpRequest();
@@ -24,7 +28,7 @@ function getQuestions() {
       createBullets(questionsCount);
 
       addQuestionData(questions[currentIndex], questionsCount);
-
+      countDown(150, questionsCount);
       submitButton.onclick = () => {
         let theRightAnswer = questions[currentIndex].correct_answer;
         //console.log(theRightAnswer);
@@ -38,7 +42,8 @@ function getQuestions() {
         addQuestionData(questions[currentIndex], questionsCount);
 
         handleBullets(questionsCount);
-
+        clearInterval(countDownInverval);
+        countDown(150, questionsCount);
         showResultFunction(questionsCount);
       };
     }
@@ -100,7 +105,7 @@ function addQuestionData(obj, count) {
 function checkAnswer(rAnswer, count) {
   // console.log(rAnswer, count);
   let theChoosenAnswer;
-  if (currentIndex < count) {
+  if (currentIndex <= count) {
     let answers = document.getElementsByName("question");
 
     for (let i = 0; i < answers.length; i++) {
@@ -133,6 +138,9 @@ function showResultFunction(count) {
     answerArea.remove();
     submitButton.remove();
     spans.remove();
+    countdoun.remove();
+    info.remove();
+    bullets.remove();
 
     if (RightAnswers > count / 2 && RightAnswers < count) {
       TheResults = `<span class="good">Good</span> , ${RightAnswers} From ${count} Is Good`;
@@ -142,5 +150,25 @@ function showResultFunction(count) {
       TheResults = `<span class="bad">bad</span> , ${RightAnswers} From ${count} Is bad`;
     }
     results.innerHTML = TheResults;
+  }
+}
+
+function countDown(duration, count) {
+  if (currentIndex < count) {
+    let minutes, secounds;
+    countDownInverval = setInterval(function () {
+      minutes = parseInt(duration / 60);
+      secounds = parseInt(duration % 60);
+
+      minutes = minutes < 10 ? `0${minutes}` : minutes;
+      secounds = secounds < 10 ? `0${secounds}` : secounds;
+
+      countdoun.innerHTML = `${minutes} : ${secounds}`;
+      if (--duration < 0) {
+        clearInterval(countDownInverval);
+        submitButton.click();
+        //console.log("time finish ");
+      }
+    }, 1000);
   }
 }
