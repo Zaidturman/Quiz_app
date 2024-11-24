@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.container {
+
+    max-width: 1200px;
+    margin: 5% auto;
+    background-color: #f9f9f9;
+    padding: 10px;
+
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 24px;
+
+}
+
+.question-area {
+    background-color: #fff;
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.answer-area {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+
+    .answer {
+        margin: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #636363;
+        padding: 5px;
+    }
+
+}
+
+.answer:not(:last-child) {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.submit {
+    margin: 10px auto;
+    width: 100%;
+    border: none;
+    background-color: #0075ff;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.submit:hover {
+    background-color: #0e7eff;
+}
+
+.bullets {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.bullets .spans {
+    display: flex;
+}
+
+.bullets .spans span {
+
+    background-color: #636363;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.bullets .spans span.on {
+    background-color: #0075ff;
+}
+
+.results {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.good {
+    color: green;
+}
+
+.perfect {
+    color: #0e7eff;
+}
+
+.bad {
+    color: red;
+}

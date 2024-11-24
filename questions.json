@@ -1,0 +1,74 @@
+{
+  "questions": [
+    {
+      "category": "HTML",
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High Text Machine Language",
+        "Hyperlink and Text Markup Language",
+        "Home Tool Markup Language"
+      ],
+      "correct_answer": "Hyper Text Markup Language"
+    },
+    {
+      "category": "HTML",
+      "question": "Which HTML element is used to define the largest heading?",
+      "options": ["<h1>", "<heading>", "<h6>", "<head>"],
+      "correct_answer": "<h1>"
+    },
+    {
+      "category": "CSS",
+      "question": "Which property is used to change the text color in CSS?",
+      "options": ["color", "text-color", "font-color", "background-color"],
+      "correct_answer": "color"
+    },
+    {
+      "category": "CSS",
+      "question": "Which CSS property is used to change the background color?",
+      "options": ["background-color", "color", "bgcolor", "background"],
+      "correct_answer": "background-color"
+    },
+    {
+      "category": "JavaScript",
+      "question": "Which of the following is a JavaScript data type?",
+      "options": ["String", "HTML", "CSS", "SQL"],
+      "correct_answer": "String"
+    },
+    {
+      "category": "JavaScript",
+      "question": "Which symbol is used for single-line comments in JavaScript?",
+      "options": ["<!-- -->", "//", "#", "/* */"],
+      "correct_answer": "//"
+    },
+    {
+      "category": "HTML",
+      "question": "What is the correct HTML element for inserting a line break?",
+      "options": ["<br>", "<break>", "<lb>", "<linebreak>"],
+      "correct_answer": "<br>"
+    },
+    {
+      "category": "CSS",
+      "question": "Which property is used to make a font bold?",
+      "options": ["font-weight", "font-bold", "text-bold", "bold"],
+      "correct_answer": "font-weight"
+    },
+    {
+      "category": "JavaScript",
+      "question": "How do you declare a JavaScript variable?",
+      "options": ["var myVariable;", "v myVariable;", "variable myVariable;", "declare myVariable;"],
+      "correct_answer": "var myVariable;"
+    },
+    {
+      "category": "JavaScript",
+      "question": "Which method is used to find an element by its ID in JavaScript?",
+      "options": [
+        "document.getElementById()",
+        "document.querySelector()",
+        "document.getElementByClass()",
+        "document.findById()"
+      ],
+      "correct_answer": "document.getElementById()"
+    }
+  ]
+}
